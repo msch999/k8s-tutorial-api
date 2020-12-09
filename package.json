@@ -1,0 +1,9 @@
+{
+  "name": "k8s-tutorial-api",
+  "version": "1.0.0",
+  "description": "going along a tutorial from https://medium.com/@benjamin.botto/what-a-cluster-deployment-using-kubernetes-and-helm-596af541285f",
+  "main": "index.js",
+  "repository": "git@github.com:msch999/k8s-tutorial-api.git",
+  "author": "Markus Schulze",
+  "license": "MIT"
+}
