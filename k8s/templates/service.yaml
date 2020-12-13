@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: k8s-tutorial-api-service
+  labels:
+    app.kubernetes.io/name: k8s-tutorial-api
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/version: {{ .Values.image.tag }}
+    app.kubernetes.io/component: api
+    app.kubernetes.io/part-of: k8s-tutorial
+    app.kubernetes.io/managed-by: helm
+spec:
+  selector:
+    app.kubernetes.io/name: k8s-tutorial-api
+    app.kubernetes.io/instance: {{ .Release.Name }}
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: NodePort
